@@ -1,0 +1,20 @@
+body {
+    
+    background-image: url("images/Diamonds.jpg");
+
+    background-repeat: repeat;
+
+    background-attachment: fixed; 
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+.roman-list {
+    text-align: left;         /* Căn chữ bên trong sang trái */
+    width: fit-content;      /* Chỉ lấy chiều rộng vừa đủ với chữ */
+    margin-left: 0;          /* Đảm bảo lề trái bằng 0 */
+    padding-left: 40px;      /* Khoảng trống cho số thứ tự (1. 2. 3.) */
+}

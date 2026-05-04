@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "K24111E",
+			"path": "."
+		},
+		{
+			"name": "ex15",
+			"path": "../Downloads/ex15"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ex15"
+	}
+}
