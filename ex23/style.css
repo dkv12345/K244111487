@@ -1,0 +1,39 @@
+
+body {
+            background-image: url('images/Marble.jpg'); /* Sử dụng hình nền Marble */
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border: 1px solid #999;
+            width: 800px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header-img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h2 {
+            color: red;
+            margin-top: 0;
+        }
+        /* Định dạng bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Gộp viền bảng lại cho gọn */
+            margin-top: 20px;
+        }
+        th {
+            text-align: left;
+            border-bottom: 2px solid #333; /* Đường kẻ dưới tiêu đề bảng */
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc; /* Đường kẻ mờ giữa các dòng */
+        }
