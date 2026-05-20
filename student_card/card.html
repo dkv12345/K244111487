@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoKhanhVi - Thẻ Sinh Viên</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+
+        .card-link {
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent; 
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 600px; 
+            height: 1000px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s; 
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+            overflow: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.uel.edu.vn" target="_blank" class="card-link">
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                
+                <div class="flip-card-front">
+                    <img src="TSV.png" alt="Mặt trước Thẻ Sinh Viên">
+                </div>
+                
+                <div class="flip-card-back">
+                    <img src="TSV.png" alt="Mặt sau Thẻ Sinh Viên">
+                </div>
+
+            </div>
+        </div>
+
+    </a>
+
+</body>
+</html>

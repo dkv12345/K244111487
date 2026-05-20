@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(230, 230, 243);
+}
+.zalo{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(133, 208, 249);
+    width: 100px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+.zalo:hover{
+    background-color: rgb(134, 134, 238);
+
+}
+
+.fisrt{
+    color: red;
+}

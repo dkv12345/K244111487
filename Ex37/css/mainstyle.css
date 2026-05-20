@@ -1,0 +1,41 @@
+/* Reset lại toàn bộ lề và khoảng đệm mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Định dạng khối bao bọc bên ngoài */
+#container {
+    position: relative; /* Thêm position để 'top: 60px' có thể hoạt động */
+    top: 60px;
+    float: left;
+    background: gray;
+    border: 1px solid blue;
+    text-indent: 0;
+}
+
+/* Định dạng thẻ danh sách ul (thường là thanh menu) */
+#container ul {
+    float: left;
+    list-style: none; /* Bỏ dấu chấm tròn mặc định của danh sách */
+}
+
+/* Định dạng từng mục li trong menu */
+#container ul li {
+    position: relative;
+    float: left; /* Dàn hàng ngang các mục */
+}
+
+/* Định dạng các đường link bên trong thẻ li */
+#container ul li a {
+    display: block; /* Biến link thành khối để bấm được toàn bộ vùng padding */
+    padding: 0.3em 6px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none; /* Bỏ gạch chân mặc định của link */
+}
+
+/* Hiệu ứng khi rê chuột vào link */
+#container ul li a:hover {
+    color: white;
+}
