@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Expense Report</title>
+    <style>
+        body {
+            background-color: rgb(204, 255, 255);
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table, th, td {
+            border: 1px solid rgb(0, 128, 128);
+        }
+        th{
+            padding: 5px;
+        }
+        td{
+            padding: 5px;
+        }
+        th {
+            background-color: rgb(179, 255, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="alert('Successfully sent notification!'); return false;">
+        
+        <div style="text-align: center;">
+            <img src="DeLong.jpg" alt="DeLong Enterprises">
+        </div>
+
+        <h2>Travel Expense Report</h2>
+        <hr> <p>
+            1) First Name: <input type="text" name="firstName"> 
+            Last Name: <input type="text" name="lastName">
+        </p>
+
+        <p>
+            2) Social Security Number: <input type="text" name="ssn" size="10"> </p>
+
+        <p>
+            3) Department: 
+            <select name="department">
+                <option value="Accounting">Accounting</option>
+                <option value="IT">IT</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </p>
+
+        <p>
+            4) Describe the purpose of your trip.<br>
+            <textarea name="purpose" rows="4" cols="50"></textarea>
+        </p>
+
+        <p>5) Itemize your travel expenses</p>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="mm/dd/yy" size="10"></td>
+                <td><input type="text" size="30"></td>
+                <td>
+                    <select name="category1">
+                        <option value="Meal">Meal</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Hotel">Hotel</option>
+                    </select>
+                </td>
+                <td><input type="text" size="8"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="mm/dd/yy" size="10"></td>
+                <td><input type="text" size="30"></td>
+                <td>
+                    <select name="category2">
+                        <option value="Meal">Meal</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Hotel">Hotel</option>
+                    </select>
+                </td>
+                <td><input type="text" size="8"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="mm/dd/yy" size="10"></td>
+                <td><input type="text" size="30"></td>
+                <td>
+                    <select name="category3">
+                        <option value="Meal">Meal</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Hotel">Hotel</option>
+                    </select>
+                </td>
+                <td><input type="text" size="8"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="mm/dd/yy" size="10"></td>
+                <td><input type="text" size="30"></td>
+                <td>
+                    <select name="category4">
+                        <option value="Meal">Meal</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Hotel">Hotel</option>
+                    </select>
+                </td>
+                <td><input type="text" size="8"></td>
+            </tr>
+        </table>
+
+        <p>
+            6) Have you submitted your receipts? 
+            <input type="radio" name="receipt" value="yes"> Yes 
+            <input type="radio" name="receipt" value="no"> 
+        </p>
+
+        <p>
+            <input type="submit" value="Submit travel expenses">
+            <input type="reset" value="Reset"> 
+        </p>
+
+        <p style="font-size: 14px;">Questions? Contact Debbie Larson in Accounting (ext. 2150).</p>
+
+    </form>
+
+</body>
+</html>

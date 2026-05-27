@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+</head>
+<body>
+
+    <form action="process_login.html" method="post" name="loginForm">
+        <table border="0" width="400" cellspacing="0" cellpadding="0">
+            <tr> 
+                <td rowspan="7">
+                    <img src="images/administrator.png" alt="Admin Image" width="150" height="250">
+                </td>
+                <td style="text-align: center; font-size: 24px; font-weight: bold">
+                    Login System
+                </td>
+            </tr>
+            <tr>
+                <td><label for="username">User Name:</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="username" name="username" value="obama" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" id="password" name="password" value="123" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="remember_me" name="remember_me" value="remember">
+                    <label for="remember_me">Remember me</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">
+                    <input type="submit" value="Login">
+                    <input type="reset" value="Reset">           
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<body>
+    <form name="colorForm">
+    <h3></h3>
+        <select id=""colorSelect" size="5" onchange="colorForm.selectedColor.style.backgroundColor = this.value; colorForm.selectedColor.value = this.value">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+        </select>
+    <p>Your selected color is:</p>
+    <input type="text" id="selectedColor" name="selectedColor">
+    </form>
+    <form name="imgForm">
+        <h3>Select an image:</h3>
+            <select id="imageSelect" name="imageSelect" size="5">
+                <option value="logo_uel.png">Logo UEL</option>
+                <option value="logo_vnu.png">Logo VNU</option>
+                <option value="myavatar.png">My avatar</option>
+            </select>
+        <p>Your selected image is:</p>
+        <img id="selectedImage" name="selectedImage" alt="No image selected"
+        style="width: 200px; height: 200px;">
+    </form>
+</body>

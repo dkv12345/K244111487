@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <img src="Jackson.gif" alt="Jackson Electronics Logo" class="logo-img">        
+        <h2>Registration Form</h2>
+        <p>Register your Jackson Electronics product here</p>
+        <hr>
+
+        <form id="regForm">
+            First Name: <input type="text" name="fname"> Last Name: <input type="text" name="lname"><br>
+            Address #1: <input type="text" name="addr1" style="width: 300px;"><br>
+            Address #2: <input type="text" name="addr2" style="width: 300px;"><br>
+            City: <input type="text"> State: <input type="text" style="width: 50px;"> Zip: <input type="text" style="width: 60px;"><br>
+            Country: <select><option>United States</option></select><br>
+            <hr>
+            Product: <select><option>ScanMaster</option></select><br>
+            Date Purchased: <input type="text"><br>
+            Serial #: <input type="text"><br>
+            
+            Used for: 
+            <input type="radio" name="usedfor"> Home
+            <input type="radio" name="usedfor"> Educational Institution
+            <input type="radio" name="usedfor"> Business
+            <input type="radio" name="usedfor"> Other
+            <input type="radio" name="usedfor"> Government<br>
+
+            System: 
+            <input type="checkbox"> Windows <input type="checkbox"> UNIX
+            <input type="checkbox"> Macintosh <input type="checkbox"> Other<br>
+
+            Comments:<br>
+            <textarea rows="4" style="width: 400px;"></textarea><br>
+
+            <button type="button" onclick="alert('Registration Successful!')">Click to register</button>
+            <button type="reset">Click to cancel</button>
+        </form>
+    </div>
+
+</body>
+</html>
