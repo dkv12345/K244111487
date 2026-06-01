@@ -7,23 +7,17 @@
     <script src="cal.js"></script>
     
     <script>
-        // Hàm xử lý tương tác giao diện
         function xuly(pt) {
-            // 1. Lấy giá trị từ ô input một cách an toàn
             let inputA = document.getElementById("hsa").value;
             let inputB = document.getElementById("hsb").value;
-
-            // 2. Chuyển đổi chuỗi thành số thực (thay vì dùng eval)
             let a = parseFloat(inputA);
             let b = parseFloat(inputB);
 
-            // 3. Kiểm tra xem người dùng đã nhập đúng số chưa
             if (isNaN(a) || isNaN(b)) {
                 document.getElementById("ketqua").innerText = "Lỗi: Vui lòng nhập số hợp lệ!";
                 return; // Dừng hàm lại, không tính toán tiếp
             }
 
-            // 4. Gọi hàm tính toán và hiển thị kết quả
             let kq = thuchienpheptoan(a, b, pt);
             document.getElementById("ketqua").innerText = kq;
         }
