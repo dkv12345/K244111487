@@ -1,0 +1,23 @@
+#tbl-cart {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 15px;
+}
+
+th, td {
+    padding: 6px;
+    text-align: center;
+}
+
+.font {
+    font-family: "Times New Roman", Times, serif;
+}
+
+#button-sum {
+    background-color: #ffc000;
+    color: white;
+    border: 1px solid #c09000;
+    padding: 4px 15px;
+    float: right; 
+    cursor: pointer;
+}

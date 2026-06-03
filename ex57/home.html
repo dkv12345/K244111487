@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="java/cart.js"></script>
+
+</head>
+
+<body>
+
+    <table border="2" id="tbl-cart">
+
+        <tr>
+
+            <th>Part Number</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Item table</th>
+
+        </tr>
+
+        <tr>
+            <td>C112</td>
+            <td>Mouse</td>
+            <td class="font">19.95$</td>
+            <td><input type="text" id="qty1" onkeyup="tinhTienDong(1, 19.95)"></td>
+            <td><input type="text" id="item1" readonly></td>
+
+        </tr>
+
+        <tr>
+            <td>B124</td>
+            <td>Keyboard US</td>
+            <td class="font">29.95$</td>
+            <td><input type="text" id="qty2" onkeyup="tinhTienDong(2, 29.95)"></td>
+            <td><input type="text" id="item2" readonly></td>
+        </tr>
+
+        <tr>
+            <td>U125</td>
+            <td>USB KingMax</td>
+            <td class="font">39.95$</td>
+            <td><input type="text" id="qty3" onkeyup="tinhTienDong(3, 39.95)"></td>
+            <td><input type="text" id="item3" readonly></td>
+        </tr>
+
+        <tr>
+            <td colspan="5"><hr></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: right;">Total:</td>
+            <td><input type="text" id="txtTotal" readonly></td>
+        </tr>
+
+        <tr>
+            <td colspan="5">
+                <button id="button-sum" onclick="tinhTongCuc()">Sum</button>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
