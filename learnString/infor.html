@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+            function make_fullname()
+            {
+                var fullname=myform.firstname.value+" "
+                            +myformm.middlename.value+" "
+                            +myform.lastname.vlaue
+                myform.fullname.value=fullname
+            }
+        </script>
+    </head>
+    <body>
+        <form name ="myform">
+            <table>
+                <tr>
+                    <td>First name:</td>
+                    <td>
+                        <input type ="text" name="middlename">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Middle Name</td>
+                    <td>
+                        <input type="text" name="middlename">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" name="lastname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Full Name</td>
+                    <td>
+                        <input type="text" name="fullname" id="fullname">
+                    </td>
+                </tr>
+        </form>
+    </body>

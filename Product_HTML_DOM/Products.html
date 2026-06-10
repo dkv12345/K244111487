@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/maincss.css">
+        <script>
+            var products=[
+                {id:1,name:"Iphone 14 Pro Max",price:30000000},
+                {id:2,name:"Samsung Galaxy S23 Ultra",price:25000000},
+                {id:3,name:"Xiaomi 13 Pro",price:20000000},
+                {id:4,name:"Oppo Find X5 Pro",price:15000000}
+            ]
+        </script>
+    </head>
+    <body>
+        <table id="tbl_product">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>#action</th>
+                </tr>
+            </thead>     
+            <tbody id="product_table_body">
+            </tbody>
+        </table>
+        <script src="js/mainjs.js"></script>
+        <script>
+            load_product_data(products,document.getElementById("product_table_body"));
+        </script>
+    </body>
+</html>

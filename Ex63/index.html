@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Member Registration</h2>
+        <hr>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <label class="title-label">Name(*)</label>
+                <input type="text" id="txtName">
+            </div>
+
+            <div class="form-group">
+                <label class="title-label">Birthday(*)</label>
+                Day: <select id="selDay"></select>
+                Month: <select id="selMonth"></select>
+                Year: <select id="selYear"></select>
+            </div>
+
+            <div class="form-group">
+                <label class="title-label">Gender(*)</label>
+                <input type="radio" name="gender" value="Man" checked id="genderMan"> <label for="genderMan">Man</label>
+                <input type="radio" name="gender" value="Woman" id="genderWoman"> <label for="genderWoman">Woman</label>
+            </div>
+
+            <div class="form-group">
+                <label class="title-label">Email(*)</label>
+                <input type="text" id="txtEmail">
+            </div>
+
+            <div class="form-group">
+                <label class="title-label align-top">Your favorite:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="hobbies" value="Shopping" id="chkShopping"> <label for="chkShopping">Shopping</label><br>
+                    <input type="checkbox" name="hobbies" value="Tourism" id="chkTourism"> <label for="chkTourism">Tourism</label><br>
+                    <input type="checkbox" name="hobbies" value="Chat" id="chkChat"> <label for="chkChat">Chat</label><br>
+                    <input type="checkbox" name="hobbies" value="Read a book" id="chkRead"> <label for="chkRead">Read a book</label><br>
+                    <input type="checkbox" name="hobbies" value="Listening to music" id="chkMusic"> <label for="chkMusic">Listening to music</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="title-label align-top">Your favorite color:</label>
+                <div class="radio-color-group">
+                    <input type="radio" name="color" value="Blue" checked id="colorBlue"> 
+                    <label for="colorBlue" class="color-label bg-blue">Blue</label><br>
+                    
+                    <input type="radio" name="color" value="Red" id="colorRed"> 
+                    <label for="colorRed" class="color-label bg-red">Red</label><br>
+                    
+                    <input type="radio" name="color" value="Yellow" id="colorYellow"> 
+                    <label for="colorYellow" class="color-label bg-yellow">Yellow</label><br>
+                    
+                    <input type="radio" name="color" value="Green" id="colorGreen"> 
+                    <label for="colorGreen" class="color-label bg-green">Green</label><br>
+                    
+                    <input type="radio" name="color" value="Violet" id="colorViolet"> 
+                    <label for="colorViolet" class="color-label bg-violet">Violet</label>
+                </div>
+            </div>
+
+            <div class="form-group action-buttons">
+                <button type="button" onclick="handleSignUp()">Sign up</button>
+                <button type="button" onclick="handleReset()">Reset</button>
+            </div>
+        </form>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                    <th>Hobbies</th>
+                    <th>Colors</th>
+                </tr>
+            </thead>
+            <tbody id="memberBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    width: 600px;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.title-label {
+    display: inline-block;
+    width: 120px;
+    font-weight: normal;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.checkbox-group, .radio-color-group {
+    display: inline-block;
+}
+
+input[type="text"] {
+    width: 180px;
+}
+
+.color-label {
+    color: white;
+    padding: 0 5px;
+    display: inline-block;
+    min-width: 50px;
+    margin-bottom: 2px;
+}
+.bg-blue { background-color: blue; }
+.bg-red { background-color: red; }
+.bg-yellow { background-color: yellow; color: black;} /* Trừ màu vàng để chữ đen cho dễ đọc */
+.bg-green { background-color: green; }
+.bg-violet { background-color: violet; }
+
+.action-buttons {
+    margin-left: 120px;
+    margin-top: 10px;
+}
+
+.action-buttons button {
+    padding: 3px 10px;
+    margin-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+thead th {
+    background-color: blue;
+    color: white;
+}

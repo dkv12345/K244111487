@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URI Parser</title>
+</head>
+<body>
+
+    <form name="myform">
+        <p>Nhập URI:</p>
+        <input type="text" name="uri" id="uri" style="width: 400px;" oninput="parseURI()">
+    </form>
+
+    <div style="margin-top: 20px;">
+        <p>Protocol: <span id="protocol"></span></p>
+        <p>ID (User): <span id="user"></span></p>
+        <p>Host: <span id="host"></span></p>
+        <p>Port: <span id="port"></span></p>
+        <p>Name: <span id="name"></span></p>
+    </div>
+
+    <script>
+        function parseURI() {
+            var uri = document.getElementById("uri").value;
+            
+            var parts = uri.split("://");
+            var protocol = parts.length > 1 ? parts[0] : "";
+            var remaining = parts.length > 1 ? parts[1] : uri;
+
+            var user = "";
+            if (remaining.indexOf("@") > -1) {
+                user = remaining.substring(0, remaining.indexOf("@"));
+                remaining = remaining.substring(remaining.indexOf("@") + 1);
+            }
+
+            var name = "";
+            if (remaining.lastIndexOf("/") > -1) {
+                name = remaining.substring(remaining.lastIndexOf("/") + 1);
+                remaining = remaining.substring(0, remaining.lastIndexOf("/"));
+            }
+
+            var host = remaining;
+            var port = "";
+            if (remaining.indexOf(":") > -1) {
+                host = remaining.substring(0, remaining.indexOf(":"));
+                port = remaining.substring(remaining.indexOf(":") + 1);
+            }
+
+            document.getElementById("protocol").textContent = protocol;
+            document.getElementById("user").textContent = user;
+            document.getElementById("host").textContent = host;
+            document.getElementById("port").textContent = port;
+            document.getElementById("name").textContent = name;
+        }
+    </script>
+</body>
+</html>

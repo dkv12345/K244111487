@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sản phẩm (Cơ bản)</title>
+</head>
+<body>
+
+    <h2>Thêm Sản Phẩm Mới</h2>
+    
+    <label>Product ID:</label>
+    <input type="text" id="productID">
+    <br><br>
+    
+    <label>Product Name:</label>
+    <input type="text" id="productName">
+    <br><br>
+    
+    <button onclick="saveProduct()">Save</button>
+
+    <hr>
+
+    <h2>Danh Sách Sản Phẩm</h2>
+    <table border="1" width="50%" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            </tbody>
+    </table>
+
+    <script>
+        function saveProduct() {
+            // Bước 1: Dùng getElementById để lấy phần tử và lấy giá trị (.value)
+            var pId = document.getElementById("productID").value;
+            var pName = document.getElementById("productName").value;
+
+            // Kiểm tra nếu người dùng chưa nhập gì thì báo lỗi và dừng lại
+            if (pId === "" || pName === "") {
+                alert("Vui lòng nhập đủ Product ID và Product Name!");
+                return;
+            }
+
+            // Bước 2: Dùng createElement để tạo ra các thẻ HTML mới (1 hàng và 2 ô)
+            var tr = document.createElement("tr"); // Tạo thẻ <tr>
+            var tdId = document.createElement("td"); // Tạo thẻ <td> cho ID
+            var tdName = document.createElement("td"); // Tạo thẻ <td> cho Name
+
+            // Bước 3: Dùng innerHTML để gán giá trị vừa lấy được vào bên trong các thẻ <td>
+            tdId.innerHTML = pId;
+            tdName.innerHTML = pName;
+
+            // Bước 4: Dùng appendChild để nhúng các thẻ <td> vào trong thẻ <tr>
+            tr.appendChild(tdId);
+            tr.appendChild(tdName);
+
+            // Bước 5: Dùng appendChild để nhúng cả thẻ <tr> (đã có đủ dữ liệu) vào phần thân bảng <tbody>
+            document.getElementById("tableBody").appendChild(tr);
+
+            // Xóa rỗng các ô nhập liệu sau khi đã lưu xong
+            document.getElementById("productID").value = "";
+            document.getElementById("productName").value = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ thống Thanh toán VietQR</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .product-card { border: 1px solid #ccc; padding: 20px; display: inline-block; border-radius: 8px; }
+        button { background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        #qr-container { margin-top: 20px; display: none; }
+        #qr-code { max-width: 300px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <h2>Sản phẩm mẫu</h2>
+        <p>Giá: <strong>30.000 đ</strong></p>
+        <button onclick="generatePaymentQR('DH1023', 30000)">Bấm Mua ngay</button>
+    </div>
+
+    <div id="qr-container">
+        <h3>Quét mã qua ứng dụng Ngân hàng để thanh toán</h3>
+        <p>Số tiền: <strong style="color: red;">30.000 đ</strong></p>
+        <img id="qr-code" src="" alt="Mã thanh toán VietQR">
+    </div>
+
+    <script>
+        function generatePaymentQR(orderId, amount) {
+            // 1. Cấu hình thông tin tài khoản của BẠN ở đây
+            const bankId = "vietcombank"; // Thay bằng ngân hàng của bạn (vcb, mbbank, techcombank,...)
+            const accountNo = "1050303288"; // Thay bằng Số tài khoản của bạn
+            const template = "compact"; // Kiểu hiển thị (compact, qr_only, print)
+            
+            // 2. Nội dung chuyển khoản (Ví dụ: Thanh toan don hang DH1023)
+            const description = encodeURIComponent("Thanh toan don hang " + orderId);
+            
+            // 3. Ghép thành URL hoàn chỉnh theo công thức của VietQR.io
+            const qrUrl = `https://img.vietqr.io/image/${bankId}-${accountNo}-${template}.jpg?amount=${amount}&addInfo=${description}`;
+            
+            // 4. Hiển thị ảnh QR lên giao diện
+            document.getElementById("qr-code").src = qrUrl;
+            document.getElementById("qr-container").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
